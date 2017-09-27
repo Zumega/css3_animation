@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: green;
+        }
+        div {
+            position: relative;
+            display: block;
+            height: 90px;
+            width: 90px;
+            margin: 10% auto;
+            border-radius: 50%;
+            border: 50px solid #000;
+            animation: borderChange 8s infinite linear;
+            box-shadow: 0 0 10px red, 0 0 10px red inset;
+        }
+
+        @keyframes borderChange {
+            0% {
+                transform: rotate(360deg);
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                border-radius: 0% 0% 50% 50%;
+            }
+            25% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                border-radius: 50% 0% 0% 50%;
+            }
+            50% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                border-radius: 50% 50% 0% 0%;
+            }
+            75% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                border-radius: 0% 50% 50% 0%;
+            }
+            100% {
+                transform: rotate(0deg);
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                border-radius: 0% 0% 50% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div>
+</div>
+
+</body>
+</html>

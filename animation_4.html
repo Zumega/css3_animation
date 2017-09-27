@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            margin: 10% auto;
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background: transparent;
+            /*animation: spin 4s infinite linear;*/
+        }
+        #out,
+        #in {
+            height: 10px;
+            width: 75px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0 auto;
+        }
+        #out {
+            top: 10px;
+            background-color: red;
+            background: radial-gradient(ellipse at center, #3f1617 0%,#ea7e80 17%,#990f0f 100%);
+            border: 1px solid crimson;
+            box-shadow: 0 0 3px #f00,  0 0 5px #ff0;
+        }
+        #in {
+            bottom: 10px;
+            background: blue;
+            background: radial-gradient(ellipse at center, #3e1742 0%,#7db9e8 17%,#0f4f99 100%);
+            border: 1px solid blueviolet;
+            box-shadow: 0 0 3px #00f,  0 0 5px aquamarine;
+        }
+        #special {
+            background: transparent;
+            border-radius: 20%;
+            height: 170px;
+            width: 75px;
+            overflow: hidden;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            margin: 0 auto;
+        }
+        .cube {
+            background-color: lightgrey;
+            height: 40px;
+            line-height: 40px;
+            width: 40px;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 25px;
+            color: deeppink;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: move;
+        }
+        .cube .nubin {
+            position: absolute;
+            display: block;
+            height: 15px;
+            width: 15px;
+            background-color: gray;
+            border-radius: 30%;
+        }
+        .cube .nubin.p1 {
+            top: -5px;
+            left: -5px;
+        }
+        .cube .nubin.p2 {
+            top: -5px;
+            right: -5px;
+        }
+        .cube .nubin.p3 {
+            bottom: -5px;
+            left: -5px;
+        }
+        .cube .nubin.p4 {
+            bottom: -5px;
+            right: -5px;
+        }
+        #cube2 {
+            animation-delay: 2s;
+        }
+
+        @keyframes move {
+            0% {
+                top: -170px;
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-360deg);
+            }
+            100% {
+                top: 170px;
+                transform: rotate(-720deg);
+            }
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div id="out"></div>
+        <div id="special">
+            <div id="cube1" class="cube">
+                <div class="nubin p1"></div>
+                <div class="nubin p2"></div>
+                <div class="nubin p3"></div>
+                <div class="nubin p4"></div>
+                &hearts;
+            </div>
+            <div id="cube2" class="cube">
+                <div class="nubin p1"></div>
+                <div class="nubin p2"></div>
+                <div class="nubin p3"></div>
+                <div class="nubin p4"></div>
+                &hearts;
+            </div>
+        </div>
+        <div id="in"></div>
+    </section>
+
+</body>
+</html>

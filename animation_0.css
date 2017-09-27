@@ -1,0 +1,114 @@
+.loading_1 {
+  display: block;
+  margin: 20% auto;
+  background: #ccc;
+  border: 5px solid #00f;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 50px #888;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.loading_1 span {
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
+  z-index: 9;
+  display: block;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .25;
+}
+.loading_1 div {
+  position: absolute;
+  left: -300px;
+  top: 80%;
+  z-index: 8;
+  display: block;
+  width: 800px;
+  height: 800px;
+  background: #88f;
+  border-radius: 40%;
+  animation:spin 35s linear infinite;
+}
+.loading_1 div:nth-child(2) {
+  background: #66f;
+  border-radius: 35%;
+  animation:spin 30s linear infinite;
+}
+.loading_1 div:last-child {
+  background: #aaf;
+  border-radius: 45%;
+  animation:spin 40s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.loading_2 {
+  background: lightblue;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.loading_2 .guy {
+  background: yellow;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+.loading_2 .guy .body {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  display: block;
+  width: 100px;
+  height: 24px;
+  background: #444;
+  border-radius: 50px 20px 40px 20px;
+}
+.loading_2 .guy .body .head {
+  display: block;
+  background: #444;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+}
+.loading_2 .guy .body .backpack {
+  display: block;
+  width: 50px;
+  height: 15px;
+  background: #444;
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border-radius: 5px 10px 10px 5px;
+}
+.loading_2 .guy .body .legs div {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: none;
+  position: absolute;
+  left: -90px;
+  transform-origin: right;
+}
+.loading_2 .guy .body .legs .left {
+  border-right-color: #000;
+  transform: rotate(10deg);
+}
+.loading_2 .guy .body .legs .right {
+  border-right-color: #444;
+  transform: rotate(-10deg);
+}
